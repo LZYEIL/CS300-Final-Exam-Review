@@ -6,7 +6,7 @@
 
 - **Linear Search:** Search the desired element one by one. *(Thus used in the linear data structures)*
 
-  
+  <br>
 
 ```java
 //Here is an example Array:
@@ -28,13 +28,15 @@ public int linearSearch(int[] arr, int element) {
      
 ```
 
+<br>
 
+<br>
 
 
 
 - **Binary Search:** Search an element in a **sorted** array by repeatedly dividing the search interval in half.
 
-
+<br>
 
 ```java
 //Here is an example Array:
@@ -74,7 +76,9 @@ public int linearSearch(int[] arr, int element) {
 
 ```
 
+<br>
 
+<br>
 
 
 
@@ -96,11 +100,11 @@ public int linearSearch(int[] arr, int element) {
 
 - The LinkedList here is an **Abstract Data Type (ADT)**. This indicates it's not actually implemented, but a data type defined by its behavior from the point of view of a user, rather than by its implementation. 
 
-  
+  <br>
 
 - Normally, **LinkedNode** serves as a single element within a LinkedList, whereas in each Node, it includes the *data* and *reference(s)* depending on the type of the LinkedList(Singly or Doubly-connected).
 
-
+​       <br>
 
 - For a **Singly-LinkdeList**:
 
@@ -112,7 +116,9 @@ public int linearSearch(int[] arr, int element) {
 
      ![Singly_LinkedList_Graph](Singly_LinkedList_Graph.png)
 
+     <br>
      
+     <br>
      
      
      
@@ -126,7 +132,7 @@ public int linearSearch(int[] arr, int element) {
   
      ![Doubly_LinkedList_Graph](Doubly_LinkedList_Graph.png)
   
-     
+     <br>
   
 
 ### Singly-LinkedList Implementation:
@@ -150,7 +156,7 @@ public interface ListADT<T> {
 }
 ```
 
-
+<br>
 
 ```java
 //Here is the LinkedNode class
@@ -188,7 +194,7 @@ public class LinkedNode<T> {
 }
 ```
 
-
+<br>
 
 ```java
 //LinkedList class
@@ -351,7 +357,7 @@ public class LinkedList implements ListADT<Integer> {
 }
 ```
 
-
+<br>
 
 ### Doubly-LinkedList Implementation:
 
@@ -401,7 +407,7 @@ public class LinkedNode<T> {
 }
 ```
 
-
+<br>
 
 ```java
 //LinkedList class
@@ -531,7 +537,7 @@ public class LinkedList implements ListADT<Integer> {
 }
 ```
 
-
+<br>
 
 
 
@@ -539,7 +545,7 @@ public class LinkedList implements ListADT<Integer> {
 
 - Both the *Stack* and *Queue* are **ADT**. 
 
-  
+  <br>
 
 ### Stack:
 
@@ -549,15 +555,15 @@ public class LinkedList implements ListADT<Integer> {
 
   Notice that *Stack* operates only on *one end*. The other end can be visualized as a *closed status* and we do not need to consider that. 
 
-  
+  <br>
 
 - As a result, *Stack's* two ends can be described as *Top* and *Bottom*, we *ONLY* interact with *Top*. All three common operations: *Push/Pop/Peek* are all operating on *Top*.
 
-  
+  <br>
 
 - That being said, *Stack* is particularly useful when you are only interested in the most recently-operated element *(which is just the TOP)*
 
-
+​       <br>
 
 ### Stack Implementation:
 
@@ -579,7 +585,7 @@ public interface StackADT<T> {
 }
 ```
 
-
+<br>
 
 ```java
 //Stack class implemented with Array
@@ -640,7 +646,7 @@ public class Stack implements StackADT<String> {
 
 - *Push/Pop/Peek* above all in O(1), and still the same if implementing in an *ArrayList*.
 
-
+<br>
 
 ### Queue:
 
@@ -650,11 +656,11 @@ public class Stack implements StackADT<String> {
 
   Notice that *Queue* operates on *Two ends*. You add something from one end and remove something from another. That being said, *the first element being added will also be the first to be removed*. 
 
-  
+  <br>
 
 - *Queue's* two ends can be describes as *front* and *back*. You add elements to *back*, remove elements from the *front* and peek elements from the *front*. 
 
-  
+  <br>
 
 - That being said, the three common operations of a *Queue*: *Enqueue/Dequeue/Peek*. Normally, a *queue* can be implemented by 1. *LinkedList* or 2. *Circular Array*. 
 
@@ -666,7 +672,7 @@ public class Stack implements StackADT<String> {
 
      We notice that the *front* is at index 7, while *back* is at index 11 (The last index of an array), adding one more element will wrap the *back* to index 0. Adding one more will cause *back* to be at index 1, etc. In this case, we DO NOT need to shuffle back and forth the elements in an array, thus all operations are in O(1).
 
-
+<br>
 
 ### Queue Implementation:
 
@@ -688,7 +694,7 @@ public interface QueueADT<T> {
 }
 ```
 
-
+<br>
 
 ```java
 //Queue class implemented using Circular Array
@@ -764,7 +770,7 @@ public class Queue implements QueueADT<String> {
 }
 ```
 
-
+<br>
 
 
 
@@ -774,22 +780,22 @@ public class Queue implements QueueADT<String> {
 
 - **Motivation:** *Encapsulating* and *abstracting* the process of **iteration** through a data structure. In Java specifically, it gives you the ability to use an *Enhanced For Loop*.
 
-
+<br>
 
 - *Iterator* is a generics interface. We need an object to implement from this interface with two required methods: **hasNext()** and **next()**.
   - hasNext(): Returns true if the iteration has more elements. 
   - next(): Returns the next element in the iteration.
   - **Note:** hasNext() **checks whether there is a current element** instead of there is an element after the current one. 
 
-
+<br>
 
 - The thing we want to *iterate through* needs to implement an *Iterable*. All it needs to do is to give an iterator object that is set up to iterate itself. 
 
-  
+  <br>
 
 - Some to notice for below is that in both *Stack* and *Stack_Iterator* classes, they are implementing from *Iterable or Iterator* of *STRING*. This is due to the nature of what actual *data* is stored in the data structure. The *Enhanced For Loop* will iterate on the *actual data* inside these structures. 
 
-  
+  <br>
 
   ### Iterator and Iterable Examples:
 
@@ -810,7 +816,7 @@ public class Queue implements QueueADT<String> {
   }
   ```
 
-  
+  <br>
 
   ```java
   //Iterator class
@@ -842,7 +848,7 @@ public class Queue implements QueueADT<String> {
   }
   ```
 
-
+<br>
 
 
 
@@ -852,7 +858,7 @@ public class Queue implements QueueADT<String> {
 
   ![Tree_Parent_Child_Graph](Tree_Parent_Child_Graph.png)
 
-  
+  <br>
 
 - **Root** is the node at the top of the tree, in the above example: A. 
 
@@ -873,7 +879,7 @@ public class Queue implements QueueADT<String> {
 
 - As you may have noticed, a *tree* is composed of *nodes*. Similar to a node within the *Doubly-LinkedList*, each node in a binary tree will have a *data* and *two references: Left and Right*. 
 
-  
+  <br>
 
 - **Tree Traversals**:
 
@@ -899,15 +905,15 @@ public class Queue implements QueueADT<String> {
      
      ```
 
-
+<br>
 
 - **Binary Search Trees:** BST is a special tree, of which the left subtree will be *smaller* than the current node and the right subtree will be *bigger*. That being said, given a valid BST, the *root node* will be the *middle value*, the smallest value will be at the *leftmost* location and the largest will be at the *rightmost*. 
 
-  
+  <br>
 
 - As a result, when traversing a BST, *In-order* is the most common way, printing each value in the *increasing* order. 
 
-  
+  <br>
 
 - **Time Complexity Analysis:**
 
@@ -915,7 +921,7 @@ public class Queue implements QueueADT<String> {
   2. Search for an element: O(logn).   *(Because we use binary search!)*
   3. **Note:** In the worst cases, when a BST is *unbalanced*, it is just a LinkedList, indicating that both *Adding/Removing* and *Looking-up* in O(n). 
 
-   
+   <br>
 
 ### BST Implementation:
 
@@ -967,7 +973,7 @@ public class TreeNode<T> {
 
 ```
 
-
+<br>
 
 - If you notice carefully, for a BST, we actually do not need a separate class to represent it. A *TreeNode* class will suffice. As a result, we will not follow what Prof. Hobbes did in class (which is a complex and unnecessary way of dealing with BSTs). 
 
@@ -1051,13 +1057,13 @@ public int calcHeight() {
 
 
 
-
+<br>
 
 ## Week 14: Heap
 
 - ***Heap*** is a data structure represented in *Binary Tree*, indicating each node will have at most two children. However, unlike *Trees*, *Heaps* are usually implemented in *Oversize Arrays*. 
 
-
+<br>
 
 - There are *Max Heap* and *Min Heap*:
   1. **Max Heap:** The value of the *parent node* is **greater than** the values of its children nodes. The *largest* element is at the *root*.
@@ -1066,7 +1072,7 @@ public int calcHeight() {
   
   3. **Note:** Left children and right children of a node does not need to follow any order.  
   
-     
+     <br>
 
 - You may wonder why we need a such data structure. It is because *Heaps* are particularly useful when realizing *Priority Queues*, in which each element has a priority associated with it. Elements with higher priority are served before those with lower. 
 
@@ -1081,7 +1087,7 @@ public int calcHeight() {
   2. add(): Add an element to the existing heap, *(Place the node at the next available location and percolate up to its desired location)*
   3. remove(): Remove the *Root node*, replace it with the *Last Leaf Node*, and *percolate down to its desired location.*
 
-
+<br>
 
 - **Time Complexity**:
   1. peek(): O(1)
@@ -1167,7 +1173,7 @@ public int calcHeight() {
   
 ```
 
-
+<br>
 
 - Important information you need to know for a heap that is implemented in an oversize-array: 
 
@@ -1177,7 +1183,7 @@ public int calcHeight() {
 
   3. Parent Index of Current Node: (i - 1) / 2
 
-     
+     <br>
 
 ### Heap Implementation:
 
@@ -1197,7 +1203,7 @@ public interface PriorityQueueADT<T extends Comparable<T>> {
 }
 ```
 
-
+<br>
 
 ```java
 //Max Heap class
@@ -1283,7 +1289,7 @@ public class Heap implements PriorityQueueADT<Integer> {
 }
 ```
 
-
+<br>
 
 
 
