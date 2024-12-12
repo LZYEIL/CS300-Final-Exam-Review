@@ -27,13 +27,17 @@
 - For a **Singly-LinkdeList**:
 
   1. *WITHOUT* the Tail node reference: Adding at the very front can be the most efficient way: O(1). Inserted node becomes the new Head.
-  
+
   2. *WITH* the Tail node reference: Adding at the very back: O(1). Inserted node becomes the new Tail.
-  
+
   3. Removing an element from a random index takes O(n). (*Mainly due to the process of SEARCHING*).
-  
-     ![Singly_LinkedList_Graph](C:\Users\d's'y\Desktop\UnitQuiz5_ReviewNotes\Singly_LinkedList_Graph.png)
-  
+
+     ![Singly_LinkedList_Graph](CS300-UnitQuiz4-Review\Singly_LinkedList_Graph.png")
+
+     
+     
+     
+     
      
 
 - For a **Doubly-LinkedList:**
