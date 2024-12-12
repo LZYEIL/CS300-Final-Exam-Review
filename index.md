@@ -2,6 +2,84 @@
 
 
 
+### Searching:
+
+- **Linear Search:** Search the desired element one by one. *(Thus used in the linear data structures)*
+
+  
+
+```java
+//Here is an example Array:
+ int[] arr = [7, 16, 4, 9, 13, 2, 8]
+     
+//Suppose we want to find the number 13:
+//The algorithm will go through the elements within a data structure ONE BY ONE
+//In our case: Search through 7 -> 16 -> 4 -> 9 and finally 13
+
+
+//COMPLEXITY: O(n)  
+public int linearSearch(int[] arr, int element) {
+    for(int i = 0;i < arr.length; i++) {
+        if(arr[i] == element) {
+           return i;
+        }
+    return -1;
+} 
+     
+```
+
+
+
+
+
+- **Binary Search:** Search an element in a **sorted** array by repeatedly dividing the search interval in half.
+
+
+
+```java
+//Here is an example Array:
+ int[] arr = [4, 6, 9, 25, 27, 31, 40]
+     
+//Suppose we want to find the number 4:
+//The algorithm will first check the MIDDLE INDEX: 25 (index 3)  > 4
+//As a result, the right half of 25 will be discarded, and a new searching area formed:
+            newArr = [4, 6, 9]    
+     
+//Repeat the previous steps, by the time there is only one/no element in the searching array, 
+//the algorithm stops. 
+
+
+   //COMPLEXITY: O(logn)     
+   public int binarySearch(int[] arr, int element) {
+     int start = 0;
+     int end = arr.length - 1;
+     
+    while(start <= end) {
+        int mid = start + ( end - start ) / 2;
+        
+        if(arr[mid] == element) {
+            return mid;
+        }
+        
+        else if(arr[mid] < element) {
+            start = mid + 1;
+        }
+
+        else {
+            end = end + 1;
+        }
+    }
+   return -1;
+  }
+
+```
+
+
+
+
+
+### Sorting:
+
 
 
 
