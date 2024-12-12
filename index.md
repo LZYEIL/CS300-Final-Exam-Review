@@ -32,7 +32,7 @@
 
   3. Removing an element from a random index takes O(n). (*Mainly due to the process of SEARCHING*).
 
-     ![Singly_LinkedList_Graph](CS300-UnitQuiz4-Review\Singly_LinkedList_Graph.png")
+     ![Singly_LinkedList_Graph](Singly_LinkedList_Graph.png)
 
      
      
@@ -46,7 +46,7 @@
   
   2. All other operations are in O(n).
   
-     ![Doubly_LinkedList_Graph](C:\Users\d's'y\Desktop\UnitQuiz5_ReviewNotes\Doubly_LinkedList_Graph.png)
+     ![Doubly_LinkedList_Graph](Doubly_LinkedList_Graph.png)
   
      
   
@@ -467,7 +467,7 @@ public class LinkedList implements ListADT<Integer> {
 
 - **Stack** follows *Last In First Out (LIFO)* order. 
 
-  <img src="C:\Users\d's'y\Desktop\UnitQuiz5_ReviewNotes\Stack_Graph.jpg" alt="Stack_Graph" style="zoom: 67%;" />
+  ![Stack_Graph](Stack_Graph.jpg)
 
   Notice that *Stack* operates only on *one end*. The other end can be visualized as a *closed status* and we do not need to consider that. 
 
@@ -568,7 +568,7 @@ public class Stack implements StackADT<String> {
 
 - On the other hand, **Queue** follows *First In First Out (FIFO)* order. 
 
-  ![Queue_Graph](C:\Users\d's'y\Desktop\UnitQuiz5_ReviewNotes\Queue_Graph.jpg)
+  ![Queue_Graph](Queue_Graph.jpg)
 
   Notice that *Queue* operates on *Two ends*. You add something from one end and remove something from another. That being said, *the first element being added will also be the first to be removed*. 
 
@@ -584,7 +584,7 @@ public class Stack implements StackADT<String> {
 
   2. By *"Circular Array"*, it means *front* and *back* does not necessarily need to be at *index 0* or *index (length - 1)* of an array. Instead, think of them as a circle:
 
-     <img src="C:\Users\d's'y\Desktop\UnitQuiz5_ReviewNotes\Circular_Array.png" alt="Circular_Array" style="zoom: 33%;" />
+     ![Circular_Array](Circular_Array.png)
 
      We notice that the *front* is at index 7, while *back* is at index 11 (The last index of an array), adding one more element will wrap the *back* to index 0. Adding one more will cause *back* to be at index 1, etc. In this case, we DO NOT need to shuffle back and forth the elements in an array, thus all operations are in O(1).
 
@@ -772,7 +772,7 @@ public class Queue implements QueueADT<String> {
 
 - **Parent/Child Relationship:**
 
-  ![Tree_Parent_Child_Graph](C:\Users\d's'y\Desktop\UnitQuiz5_ReviewNotes\Tree_Parent_Child_Graph.png)
+  ![Tree_Parent_Child_Graph](Tree_Parent_Child_Graph.png)
 
   
 
@@ -787,7 +787,7 @@ public class Queue implements QueueADT<String> {
   1. Number of nodes from *Root* to *The Farthest Leaf*.
   2. Number of edges from *Root* to *The Farthest Leaf*.
 
-  <img src="C:\Users\d's'y\Desktop\UnitQuiz5_ReviewNotes\Tree_Height_Graph.png" alt="Tree_Height_Graph" style="zoom:38%;" />
+  ![Tree_Graph](Tree_Height_Graph.png)
 
   In the above example: Number of Nodes is 4, while Number of edges is 3. 
 
