@@ -1293,13 +1293,27 @@ public class Heap implements PriorityQueueADT<Integer> {
 
 
 
+- **Heap Sort:** We first find the max (or min) element and swap it with the last (or first). We repeat the same process for the remaining elements.
+
+  ![HeapSort_Step1](HeapSort_Step1.png)
+
+  ![HeapSort_Step2](HeapSort_Step2.png)
+
+  ![HeapSort_Step3](HeapSort_Step3.png)
+
+  ![HeapSort_Step4](HeapSort_Step4.png)
+
+  ![HeapSort_Step5](HeapSort_Step5.png)
+
+  ![HeapSort_Step6](HeapSort_Step6.png)
+
+  <br>
+
+  <br>
+
 ## Acknowledgment
 
 *This Document is Created by **Zhiyuan Li** for Revision of CS300. It Serves as the Summary of Concepts Students are Expected to Know for the Unit Quiz 4*.
-
-
-
-*This Document is Free-of-Charge, Open-Source, Protected under the MIT License*: [Learn More](https://opensource.org/license/mit)
 
 
 
