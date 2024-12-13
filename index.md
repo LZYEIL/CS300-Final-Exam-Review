@@ -84,11 +84,101 @@ public int linearSearch(int[] arr, int element) {
 
 ### Sorting:
 
+<br>
+
+- **Selection Sort:** It sorts an array by repeatedly selecting the ***smallest (or largest)*** element from the unsorted portion and swapping it with the first unsorted element. This process continues until the entire array is sorted. **Thus its complexity is O(n^2) and it is NOT STABLE**
+
+  
+
+  1. First we find the smallest element and swap it with the first element. This way we get the smallest element at its correct position.
+
+  2. Then we find the smallest among remaining elements (or second smallest) and swap it with the second element.
+
+  3. We keep doing this until we get all elements moved to correct position.
+
+     
+
+     <br>
+
+     
+
+     ![SelectionSort_Step1](SelectionSort_Step1.png)
+
+     ![SelectionSort_Step2](SelectionSort_Step2.png)
+
+     ![SelectionSort_Step3](SelectionSort_Step3.png)
+
+     ![SelectionSort_Step4](SelectionSort_Step4.png)
+
+     ![SelectionSort_Step5](SelectionSort_Step5.png)
+
+     ![SelectionSort_Step6](SelectionSort_Step6.png)
+
+     
+
+     
+
+     <br>
+
+     <br>
+
+- **Insertion Sort:** It iteratively inserting each element of an unsorted list into its correct position in a sorted portion of the list. 
+  1. We start with second element of the array as first element in the array is assumed to be sorted.
+  2. Compare second element with the first element and check if the second element is smaller then swap them.
+  3. Move to the third element and compare it with the first two elements and put at its correct position
+  4. Repeat until the entire array is sorted.
+
+<br>
+
+- **Complexity Analysis:** 
+  1. O(n) if already sorted. 
+  2. O(n^2) normal case. 
+  3. It is a stable algorithm.
+
+<br>
+
+![InsertionSort_Graph](InsertionSort_Graph.png)
+
+<br>
+
+<br>
+
+- **Bubble Sort:** It works by repeatedly swapping the adjacent elements if they are in the wrong order. 
+
+  1. We sort the array using multiple passes. After the first pass, the maximum element goes to end (its correct position). Same way, after second pass, the second largest element goes to second last position and so on.
+  2. In every pass, we process only those elements that have already not moved to correct position. After k passes, the largest k elements must have been moved to the last k positions.
+  3. In a pass, we consider remaining elements and compare all adjacent and swap if larger element is before a smaller element. If we keep doing this, we get the largest (among the remaining elements) at its correct position.
+
+  <br>
+
+- **Complexity Analysis:** O(n^2) and it is a STABLE algorithm.
+
+  <br>
+
+![BubbleSort_Step1](BubbleSort_Step1.png)
+
+![BubbleSort_Step2](BubbleSort_Step2.png)
+
+![BubbleSort_Step3](BubbleSort_Step3.png)
+
+<br>
+
+<br>
+
+- **Merge Sort:** 
+  1. ***Divide:*** Divide the list or array recursively into two halves until it can no more be divided.
+  2. ***Conquer:*** Each subarray is sorted individually using the merge sort algorithm.
+  3. ***Merge:*** The sorted subarrays are merged back together in sorted order. The process continues until all elements from both subarrays have been merged.
+
+<br>
+
+- **Complexity Analysis:**
+
+  
 
 
 
-
-
+![MergeSort_Graph](MergeSort_Graph.png)
 
 
 
@@ -1318,3 +1408,4 @@ public class Heap implements PriorityQueueADT<Integer> {
 
 
 ***Disclaimer:** Reading this Document Requires Intermediate Knowledge of the Concepts in CS300, It Does Not Serve as a Detailed Handbook. Besides, the Author Does Not Guarantee Quiz Outcomes after Walking through this Document, but You Should be Capable of Solving Most, if Not All, of the Challenging Questions that May Appear.* 
+
