@@ -131,7 +131,7 @@ public int linearSearch(int[] arr, int element) {
 <br>
 
 - **Complexity Analysis:** 
-  1. O(n) if already sorted. 
+  1. O(n) if already sorted.  
   2. O(n^2) normal case. 
   3. It is a stable algorithm.
 
@@ -174,17 +174,61 @@ public int linearSearch(int[] arr, int element) {
 
 - **Complexity Analysis:**
 
-  
+  1. Time Complexity: O(nlogn).
+  2. Auxiliary Space: O(n).    *(Additional Space Used to Facilitate the Divide Process)*
+  3. It is a stable algorithm.
+
+  <br>
 
 
 
 ![MergeSort_Graph](MergeSort_Graph.png)
 
+<br>
+
+<br>
+
+- **Quick Sort:**
+  1. ***Choose a Pivot:*** Select an element from the array as the pivot. The choice of pivot can vary (normally middle values).
+  2. ***Partition the Array:*** Rearrange the array around the pivot. After partitioning, all elements smaller than the pivot will be on its left, and all elements greater than the pivot will be on its right. The pivot is then in its correct position, and we obtain the index of the pivot.
+  3. ***Recursively Call:*** Recursively apply the same process to the two partitioned sub-arrays (left and right of the pivot).
+  4. ***Base Case:*** The recursion stops when there is only one element left in the sub-array, as a single element is already sorted.
+
+<br>
+
+- **Complexity Analysis:**
+  1. Time Complexity: O(nlogn).
+  2. Auxiliary Space: O(n).    *(Additional Space Used to Facilitate the Divide Process)*
+  3. It is NOT stable.
+
+<br>
+
+```markdown
+
+Ideas: 
+
+1. Index L begins at index i and is incremented until a value >= the pivot is found.
+
+2. Index H begins at index k, and is decremented until a value <= the pivot is found.
+
+3. Elements at indices L and H are swapped; L++ and H--.
+
+4. Repeat until L and H intersect or cross; H is now the highest index of the LOW partition.
+
+                   
+```
 
 
 
+<br>
 
+- **Quick Summary:**
 
+![Sorting_Algo_Summarize](Sorting_Algo_Summarize.png)
+
+<br>
+
+<br>
 
 ## Week 10: LinkedLists
 
