@@ -1212,7 +1212,7 @@ public int calcHeight() {
 
 
 
-- But why don't we use BST instead? Remember BST has O(logn) on most of common operations. The reason is that *We want peek() and remove to be in CONSTANT Time*. 
+- But why don't we use BST instead? Remember BST has O(logn) on most of common operations. The reason is that *We want peek() to be in CONSTANT Time*. 
 
 
 
